@@ -4,11 +4,11 @@
   "version": "1.1.0",
   "description": "Phased architecture, security, performance, and maintainability audits of OutSystems 11 modules through the Service Studio MCP server, plus a report synthesizer.",
   "author": {
-    "name": "Grayson Udstrand",
-    "url": "https://github.com/grayson-os"
+    "name": "OutSystems Professional Services (AMER)",
+    "url": "https://github.com/gmanuels-os"
   },
-  "homepage": "https://github.com/grayson-os/agent-experience-auditor",
-  "repository": "https://github.com/grayson-os/agent-experience-auditor",
+  "homepage": "https://github.com/gmanuels-os/o11-agent-experience-auditor",
+  "repository": "https://github.com/gmanuels-os/o11-agent-experience-auditor",
   "keywords": [
     "outsystems",
     "outsystems-11",

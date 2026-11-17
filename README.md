@@ -113,14 +113,14 @@ The first time your agent calls the server, Service Studio shows an **Allow AI a
 In a Claude Code session (version 2.1.275 or later):
 
 ```text
-/plugin install os11-audit --marketplace grayson-os/agent-experience-auditor
+/plugin install os11-audit --marketplace gmanuels-os/o11-agent-experience-auditor
 ```
 
 Or from your shell, on any version that supports plugins:
 
 ```bash
-claude plugin marketplace add grayson-os/agent-experience-auditor
-claude plugin install os11-audit@agent-experience-auditor
+claude plugin marketplace add gmanuels-os/o11-agent-experience-auditor
+claude plugin install os11-audit@o11-agent-experience-auditor
 ```
 
 Restart Claude Code, then run `/plugin` to confirm `os11-audit` is installed with five skills. If you have no GitHub SSH key and the install fails, set `CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1` and try again.
@@ -131,17 +131,17 @@ Use the cross-agent [`skills`](https://github.com/vercel-labs/skills) installer,
 
 ```bash
 # Current project only
-npx skills add grayson-os/agent-experience-auditor
+npx skills add gmanuels-os/o11-agent-experience-auditor
 
 # All projects for one agent (for example, Cursor)
-npx skills add grayson-os/agent-experience-auditor -g -a cursor
+npx skills add gmanuels-os/o11-agent-experience-auditor -g -a cursor
 ```
 
 Start a new agent session afterward. Agents discover skills only when a session starts.
 
 #### Manual Install
 
-Download the `os11-audit-skills-vX.Y.Z.zip` asset from the [latest release](https://github.com/grayson-os/agent-experience-auditor/releases/latest) and copy each folder under `skills/` into your agent's skills directory, keeping the folder names unchanged:
+Download the `os11-audit-skills-vX.Y.Z.zip` asset from the [latest release](https://github.com/gmanuels-os/o11-agent-experience-auditor/releases/latest) and copy each folder under `skills/` into your agent's skills directory, keeping the folder names unchanged:
 
 | Agent | Project path | Global path |
 | :--- | :--- | :--- |
@@ -152,15 +152,15 @@ Download the `os11-audit-skills-vX.Y.Z.zip` asset from the [latest release](http
 
 ## Updating
 
-Each release is a `vX.Y.Z` git tag with a matching [GitHub release](https://github.com/grayson-os/agent-experience-auditor/releases) and [CHANGELOG](CHANGELOG.md) entry.
+Each release is a `vX.Y.Z` git tag with a matching [GitHub release](https://github.com/gmanuels-os/o11-agent-experience-auditor/releases) and [CHANGELOG](CHANGELOG.md) entry.
 
 | Installed with | Update command |
 | :--- | :--- |
-| Claude Code plugin | `claude plugin marketplace update agent-experience-auditor`, then `claude plugin update os11-audit@agent-experience-auditor`, then restart Claude Code |
+| Claude Code plugin | `claude plugin marketplace update o11-agent-experience-auditor`, then `claude plugin update os11-audit@o11-agent-experience-auditor`, then restart Claude Code |
 | `npx skills` | `npx skills update` (add `-g` for global installs) |
 | Manual copy | Download the new release zip and replace the folders |
 
-Claude Code users can also turn on automatic updates: run `/plugin`, open **Marketplaces**, select `agent-experience-auditor`, and choose **Enable auto-update**.
+Claude Code users can also turn on automatic updates: run `/plugin`, open **Marketplaces**, select `o11-agent-experience-auditor`, and choose **Enable auto-update**.
 
 ### Pinning a Release
 
@@ -168,10 +168,10 @@ To stay on one version instead of tracking the latest release, install from its 
 
 ```bash
 # Claude Code
-claude plugin marketplace add grayson-os/agent-experience-auditor#v1.1.0
+claude plugin marketplace add gmanuels-os/o11-agent-experience-auditor#v1.1.0
 
 # Other agents
-npx skills add https://github.com/grayson-os/agent-experience-auditor/tree/v1.1.0
+npx skills add https://github.com/gmanuels-os/o11-agent-experience-auditor/tree/v1.1.0
 ```
 
 To move to a newer pinned version, remove the old install and repeat with the new tag.
@@ -286,11 +286,11 @@ Test a branch without publishing a release:
 ```bash
 # Claude Code: load the plugin from your working copy for one session.
 # It replaces an installed os11-audit for that session only.
-claude --plugin-dir /path/to/agent-experience-auditor
+claude --plugin-dir /path/to/o11-agent-experience-auditor
 
 # Other agents: install the skills from your working copy (or a pushed branch).
-npx skills add /path/to/agent-experience-auditor
-npx skills add https://github.com/grayson-os/agent-experience-auditor/tree/<branch>
+npx skills add /path/to/o11-agent-experience-auditor
+npx skills add https://github.com/gmanuels-os/o11-agent-experience-auditor/tree/<branch>
 ```
 
 ### Editing the Platform Baseline
